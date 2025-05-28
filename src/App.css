@@ -1,0 +1,476 @@
+/* Efeitos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+main {
+    overflow-x: hidden; /* Evita que o conteúdo ultrapasse a largura da tela */
+}
+
+/* Topo da página */
+.topo {
+    width: 100%;
+    position: fixed;
+    background-color: #604829;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.topo img {
+    width: 80px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #c4a47c;
+    margin: 4px 0;
+}
+
+/* Menu Desktop */
+.nav-desktop {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-desktop a {
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 2px 4px 2px #000000;
+    letter-spacing: 1px;
+    color: #c4a47c;
+}
+
+/* Menu Mobile */
+.nav-mobile {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0; /* Ajusta para iniciar do lado esquerdo */
+    right: 0; /* Remove a necessidade de ajustar a margem direita */
+    background-color: #604829;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-mobile a {
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    color: #c4a47c;
+    text-decoration: none;
+    text-shadow: 2px 4px 2px #000000;
+}
+
+.nav-mobile.active {
+    display: flex;
+}
+
+/* Container Parallax */
+.container-parallax1,
+.container-parallax2,
+.container-parallax3,
+.container-parallax4,
+.container-parallax5 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Container Parallax 1 */
+.container-parallax1 {
+    background-image: url("../img/parallax-imagem1.png");
+    height: 100vh;
+}
+
+.container-parallax1 h1 {
+    top: 45%;
+    right: 0;
+    left: 0;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-family: "Fraunces", serif;
+    font-size: 60px;
+}
+
+/* Container Parallax 2 */
+.container-parallax2 {
+    background-image: url("../img/parallax-imagem2.jpg");
+    height: 50vh;
+}
+
+.container-parallax2 h3,
+.container-parallax3 h3 {
+    width: 90%;
+    padding: 10px;
+    position: relative;
+    top: 45%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    font-family: "Fraunces", sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: #604829;
+    color: #fff;
+}
+
+/* Container Parallax 3 */
+.container-parallax3 {
+    background-image: url("../img/parallax-imagem3.jpg");
+    height: 50vh;
+}
+
+/* Container Parallax 4 */
+.container-parallax4 {
+    background-image: url("../img/parallax-imagem4.png");
+    height: 100vh;
+}
+
+.container-parallax4 h2 {
+    width: 500px;
+    padding: 10px;
+    position: relative;
+    top: 10%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    font-size: 24px;
+    font-family: "Oswald", serif;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #fff;
+    background-color: #604829;
+}
+
+.container-parallax4 iframe {
+    position: absolute;
+    top: 23%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%; /* Garante que o iframe ocupe toda a largura disponível */
+    height: auto; /* Mantém a proporção de altura */
+    max-width: 100%; /* Evita que o iframe ultrapasse a largura do container */
+}
+
+.container-contatos {
+    width: 500px;
+    padding: 10px;
+    position: absolute;
+    bottom: 8%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: #604829;
+}
+
+.container-contatos p {
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    line-height: 36px;
+    text-shadow: 0px 6px 8px #000000;
+    text-align: center;
+}
+
+/* Efeitos aplicados a classe container-texto */
+.container-texto {
+    padding: 80px 10px; /* Reduz o padding para telas menores */
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #666;
+}
+
+.container-texto h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-family: "Oswald", sans-serif;
+    color: #c4a47c;
+}
+
+.container-texto p {
+    max-width: 1024px;
+    padding: 0px 20px;
+    margin: 0 auto;
+    font-family: "Lato", "sans-serif";
+    line-height: 34px;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+/* Container Parallax 5 */
+.container-parallax5 {
+    height: 85vh;
+    background-image: url("../img/cafeteria.jpg");
+}
+
+.container-parallax5 h2 {
+    position: absolute;
+    margin: 0 auto;
+    top: 5%;
+    right: 0;
+    left: 0;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    letter-spacing: 3px;
+    color: white;
+    font-size: 24px;
+}
+
+/* Flexbox para lista de horários */
+.lista-horarios {
+    max-width: 768px;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 20%;
+    right: 0;
+    left: 0;
+    font-family: "Oswald", sans-serif;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.lista-horarios li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    position: relative;
+}
+
+.lista-horarios li h3 {
+    color: #fff;
+    flex: 1;
+}
+
+.lista-horarios li div {
+    flex: 2;
+    height: 1px;
+    background-color: #acacac;
+    margin: 0 20px;
+}
+
+.lista-horarios li p,
+.texto-marrom {
+    flex: 1;
+    text-align: right;
+    font-weight: 700;
+    font-family: "Oswald", sans-serif;
+}
+
+.texto-marrom {
+    color: #c4a47c;
+}
+
+.lista-horarios li p {
+    color: #acacac;
+}
+
+/* Rodapé */
+.container-rodape {
+    position: relative;
+    padding: 20px 10px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    background-color: #000000;
+    color: #fff;
+}
+
+.container-rodape span {
+    color: #c4a47c;
+}
+
+/* Estilo específico para o link do portfólio no rodapé */
+.container-rodape p a {
+    color: #c4a47c; /* Ajuste a cor se desejar */
+    text-decoration: none;
+}
+
+.container-rodape p a:hover {
+    text-decoration: underline; /* Opcional: efeito de hover */
+}
+
+/* Botão Voltar ao Topo */
+.back-to-top {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-image: url("../img/seta-para-cima.png");
+    background-position: center;
+    background-size: cover;
+    background-color: #c4a47c;
+    border-radius: 4px;
+}
+
+/* Estilo específico para o botão de seta */
+.voltar-topo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-image: url("../img/seta-para-cima.png");
+    background-position: center;
+    background-size: cover;
+    background-color: #c4a47c;
+    border-radius: 4px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .topo {
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    .topo img {
+        width: 60px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-right: 10px; /* Ajusta a margem para dentro do container */
+    }
+
+    .menu-toggle.active .menu-bar:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
+    }
+
+    .menu-toggle.active .menu-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .menu-bar:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -8px;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .container-parallax1 h1 {
+        font-size: 40px;
+    }
+
+    .container-parallax2 h3,
+    .container-parallax3 h3 {
+        font-size: 16px;
+    }
+
+    .container-texto p {
+        padding: 0 10px;
+    }
+
+    .container-parallax4 iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .container-contatos {
+        width: 100%;
+    }
+
+    .container-parallax5 h2 {
+        margin-top: 15%;
+    }
+
+    .lista-horarios {
+        font-size: 14px;
+        bottom: 15%;
+    }
+
+    .back-to-top {
+        right: 10px; /* Ajusta a margem para dentro do container */
+        bottom: 10px; /* Ajusta a margem para dentro do container */
+    }
+}
+
+/* Botão Voltar ao Topo */
+.back-to-top {
+    display: none; /* Inicialmente oculto */
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-image: url("../img/seta-para-cima.png");
+    background-position: center;
+    background-size: cover;
+    background-color: #c4a47c;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.back-to-top.visible {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Tooltip */
+.back-to-top[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    padding: 5px 10px;
+    background: #604829;
+    color: #fff;
+    font-size: 14px;
+    font-family: "Oswald", sans-serif;
+    white-space: nowrap;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
