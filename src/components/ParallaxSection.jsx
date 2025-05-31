@@ -1,4 +1,4 @@
-const ParallaxSection = ({ image, text }) => {
+const ParallaxSection = ({ image, text, isDarkMode }) => {
     const getClassName = () => {
         switch (image) {
             case "parallax-imagem2.jpg":
@@ -16,8 +16,7 @@ const ParallaxSection = ({ image, text }) => {
 
     return (
         <section
-            className={getClassName()}
-            style={{ backgroundImage: `url(/img/${image})` }}
+            className={`${getClassName()} ${isDarkMode ? "dark-mode" : ""}`}
         >
             {text && <h3>{text}</h3>}
         </section>

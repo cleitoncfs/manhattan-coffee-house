@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import InfoSection from "./components/InfoSection";
@@ -11,6 +11,13 @@ import "./App.css";
 
 const App = () => {
     const { isVisible, scrollToTop } = useScrollToTop();
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    // Alterna entre Light e Dark Mode
+    const toggleDarkMode = () => {
+        setIsDarkMode(!isDarkMode);
+        document.body.classList.toggle("dark-mode", !isDarkMode);
+    };
 
     const infoSections = [
         {
@@ -33,7 +40,7 @@ const App = () => {
 
     return (
         <>
-            <Header />
+            <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
             <Banner />
             <main>
                 <InfoSection
@@ -44,6 +51,7 @@ const App = () => {
                 <ParallaxSection
                     image="parallax-imagem2.jpg"
                     text="Um bom café é motivo de alegria!"
+                    isDarkMode={isDarkMode}
                 />
                 <InfoSection
                     title={infoSections[1].title}
@@ -52,6 +60,7 @@ const App = () => {
                 <ParallaxSection
                     image="parallax-imagem3.jpg"
                     text="A vida só começa depois do café!"
+                    isDarkMode={isDarkMode}
                 />
                 <InfoSection
                     title={infoSections[2].title}

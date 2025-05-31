@@ -1,17 +1,24 @@
+// src/components/Footer.jsx
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 const Footer = () => {
     return (
-        <footer className="container-rodape">
-            <p>
-                &copy; Manhattan - Coffee House - Todos os direitos reservados
+        <footer className="footer">
+            <p className="footer-copyright">
+                © {new Date().getFullYear()} Manhattan - Coffee House - Todos os
+                direitos reservados
             </p>
-            <p>
-                Desenvolvido por
+            <p className="footer-credits">
+                Desenvolvido por{" "}
                 <a
-                    href="https://cleitoncfs.github.io/Portfolio-Cleiton/"
+                    href="https://portfolio-cleiton.netlify.app/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="footer-link"
+                    aria-label="Portfólio do desenvolvedor (abre em nova aba)"
                 >
-                    🔗Cleiton Santos - Web Developer™
+                    <span>Cleiton Santos</span>
+                    <FaExternalLinkAlt className="link-icon" />
                 </a>
             </p>
         </footer>

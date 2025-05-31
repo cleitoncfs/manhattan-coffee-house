@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../../public/img/logo.png";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,6 +12,7 @@ const Header = () => {
     return (
         <header className="topo">
             <img src={logo} alt="Logomarca Manhattan Coffee House" />
+            <ThemeToggle />
             <div
                 className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
                 onClick={toggleMenu}

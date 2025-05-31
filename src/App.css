@@ -172,11 +172,12 @@ main {
     left: 0;
     right: 0;
     margin: auto;
-    width: 100%; /* Garante que o iframe ocupe toda a largura disponível */
-    height: auto; /* Mantém a proporção de altura */
-    max-width: 100%; /* Evita que o iframe ultrapasse a largura do container */
+    width: 95%;
+    height: 45%;
+    max-width: 100%;
 }
 
+/* CONTATOS */
 .container-contatos {
     width: 500px;
     padding: 10px;
@@ -298,31 +299,136 @@ main {
     color: #acacac;
 }
 
-/* Rodapé */
-.container-rodape {
-    position: relative;
-    padding: 20px 10px;
-    line-height: 24px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    font-family: "Lato", sans-serif;
+/* ===== FOOTER MODERNO ===== */
+.footer {
+    padding: 25px 10px;
     text-align: center;
-    background-color: #000000;
+    background-color: #000;
     color: #fff;
+    font-family: "Lato", sans-serif;
+    line-height: 1.6;
 }
 
-.container-rodape span {
+.footer-copyright {
+    margin-bottom: 10px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.footer-credits {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.footer-link {
     color: #c4a47c;
-}
-
-/* Estilo específico para o link do portfólio no rodapé */
-.container-rodape p a {
-    color: #c4a47c; /* Ajuste a cor se desejar */
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
 }
 
-.container-rodape p a:hover {
-    text-decoration: underline; /* Opcional: efeito de hover */
+.footer-link:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #c4a47c;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.link-icon {
+    font-size: 12px;
+    opacity: 0.8;
+}
+/* ===== DARK MODE ===== */
+.dark-mode .footer {
+    background-color: #111;
+}
+
+.dark-mode .footer-link {
+    color: #d4b483;
+}
+
+/* Aplicando o efeito Dark Mode a todas as imagens parallax */
+.dark-mode .container-parallax1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(/img/parallax-imagem1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.dark-mode .container-parallax2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(/img/parallax-imagem2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.dark-mode .container-parallax3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(/img/parallax-imagem3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.dark-mode .container-parallax4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(/img/parallax-imagem4.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.dark-mode .container-parallax5 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(/img/cafeteria.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.dark-mode .container-parallax1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(/img/parallax-imagem1.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantém o parallax */
+}
+
+.dark-mode .container-parallax2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(/img/parallax-imagem2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantém o parallax */
+}
+
+.dark-mode .container-parallax3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(/img/parallax-imagem3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantém o parallax */
+}
+
+.dark-mode .container-parallax4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(/img/parallax-imagem4.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantém o parallax */
+}
+
+.dark-mode .container-parallax5 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(/img/cafeteria.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantém o parallax */
 }
 
 /* Botão Voltar ao Topo */
@@ -473,4 +579,123 @@ main {
     border-radius: 4px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
     z-index: 1001;
+}
+
+/* Dark Mode Básico */
+body.dark-mode {
+    background-color: #222;
+    color: #f0f0f0;
+}
+
+.dark-mode .topo {
+    background-color: #1a1a1a !important;
+}
+
+.dark-mode .container-texto {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.dark-mode .container-texto h2 {
+    color: #c4a47c;
+}
+
+.dark-mode .container-rodape {
+    background-color: #111;
+    color: #ddd;
+}
+
+/* Estilo do botão de toggle */
+.theme-toggle {
+    background: transparent;
+    border: 1px solid #c4a47c;
+    color: #c4a47c;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+    font-family: "Oswald", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: #c4a47c;
+    color: #1a1a1a;
+}
+
+.dark-mode .classe-do-elemento {
+    color: #f0f0f0;
+    background-color: #333;
+}
+
+.dark-mode .texto-marrom {
+    color: #d4b483; /* Versão mais clara do marrom original */
+}
+
+.dark-mode {
+    --text-color: #f0f0f0;
+    --bg-color: #1e1e1e;
+    --accent-color: #c4a47c;
+}
+
+/* Versão atual para mobile (<= 768px) */
+@media (max-width: 768px) {
+    .container-parallax4 iframe {
+        width: 100%;
+        height: 420px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Media query para telas pequenas (iphone 13 Mini etc) */
+@media (max-width: 375px) {
+    .container-parallax4 iframe {
+        height: 250px;
+        margin-top: 15px;
+    }
+
+    .container-parallax4 h2 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 1.7rem; /* Reduz o tamanho da fonte */
+        padding: 5px 15px; /* Adiciona padding lateral */
+        width: 100%;
+    }
+}
+
+/ @media (min-width: 376px) and (max-width: 420px) {
+    .container-parallax4 iframe {
+        height: 350px;
+    }
+}
+
+/* Ajustes específicos para iPhone 5/SE e telas muito pequenas */
+@media (max-width: 320px) {
+    /* Correção do título */
+    .container-parallax4 h2 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 1.5rem; /* Reduz o tamanho da fonte */
+        padding: 0 10px; /* Adiciona padding lateral */
+        width: 100%;
+    }
+
+    /* Ajuste do mapa */
+    .container-parallax4 iframe {
+        height: 200px !important; /* Altura reduzida */
+        margin-top: 10px;
+    }
+
+    /* Ajuste dos contatos */
+    .container-contatos {
+        width: 90% !important;
+        padding: 8px !important;
+        bottom: 5% !important;
+    }
+
+    .container-contatos p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
 }
