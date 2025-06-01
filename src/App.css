@@ -684,3 +684,31 @@ body.dark-mode {
         line-height: 1.5;
     }
 }
+
+/* Otimização do Parallax para Mobile - Solução para iPhones (Especialmente Pro Max) */
+@media (max-width: 1024px) and (hover: none) {
+    .container-parallax1,
+    .container-parallax2,
+    .container-parallax3,
+    .container-parallax4,
+    .container-parallax5 {
+        background-attachment: scroll !important; /* Remove parallax em dispositivos touch */
+        background-position: center !important;
+        height: auto;
+        min-height: 60vh; /* Altura mais segura */
+    }
+}
+
+/* Ajuste Específico para iPhone 13 Pro Max */
+@media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+    /* Ajuste de imagens */
+    .container-parallax1 {
+        background-size: 120% auto; /* Melhor cobertura */
+    }
+
+    /* Performance */
+    .container-parallax::before {
+        transform: translateZ(0); /* Aceleração GPU */
+        will-change: transform;
+    }
+}
